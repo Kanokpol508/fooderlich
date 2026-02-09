@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fooderlich/card1.dart';
+import 'package:fooderlich/card2.dart';
+import 'package:fooderlich/card3.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,9 +16,9 @@ class _HomeState extends State<HomePage> {
   int _selectedIndex = 0;
 
   static List<Widget> page = <Widget>[
-    Container(color: Colors.red),
-    Container(color: Colors.green),
-    Container(color: Colors.blue),
+    Card1(),
+    Card2(),
+    Card3(),
   ];
   // 9
   void _onItemTapped(int index) {
@@ -29,6 +32,7 @@ class _HomeState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'Fooderlich',
           // 2
